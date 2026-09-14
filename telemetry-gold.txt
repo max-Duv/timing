@@ -1,0 +1,126 @@
+admin@securesync-0e2976:~$ XO_GetDac 0
+
+ DAC value: 0x000072C9
+admin@securesync-0e2976:~$ XO_GetZeroDac 0
+
+ zero-DAC value: 0x000072C7
+admin@securesync-0e2976:~$ XO_GetPhaseError 0
+
+  XO Phase Error: 5 ns
+admin@securesync-0e2976:~$ XO_GetFreqError 0
+
+  XO Frequency Error: 0.000078 Hz
+admin@securesync-0e2976:~$ /usr/cli/oscget 
+OCXO (5ppb)
+admin@securesync-0e2976:~$ /usr/cli/tfomget 
+2 (1 ns < Est. Time Error <= 10 ns)
+admin@securesync-0e2976:~$ /usr/cli/oscget --help 2>&1; /usr/cli/oscget -h 2>&1
+OCXO (5ppb)
+OCXO (5ppb)
+admin@securesync-0e2976:~$ /usr/cli/tfomget --help 2>&1; /usr/cli/tfomget -h 2>&1
+2 (1 ns < Est. Time Error <= 10 ns)
+2 (1 ns < Est. Time Error <= 10 ns)
+admin@securesync-0e2976:~$ /usr/cli/ppsctrl --help 2>&1; /usr/cli/ppsctrl -h 2>&1; /usr/cli/ppsctrl 2>&1
+Invalid arguments
+Usage: ppsctrl <index> <on|off>
+Invalid arguments
+Usage: ppsctrl <index> <on|off>
+Invalid arguments
+Usage: ppsctrl <index> <on|off>
+admin@securesync-0e2976:~$ type XO_GetDac XO_GetPhaseError XO_GetFreqError XO_GetZeroDac
+XO_GetDac is hashed (/usr/bin/XO_GetDac)
+XO_GetPhaseError is hashed (/usr/bin/XO_GetPhaseError)
+XO_GetFreqError is hashed (/usr/bin/XO_GetFreqError)
+XO_GetZeroDac is hashed (/usr/bin/XO_GetZeroDac)
+admin@securesync-0e2976:~$ which XO_GetDac XO_GetPhaseError
+/usr/bin/XO_GetDac
+/usr/bin/XO_GetPhaseError
+admin@securesync-0e2976:~$ compgen -c | grep -iE '^XO_|^xo_'
+XO_GetAlarm
+XO_GetCalVal
+XO_GetDac
+XO_GetFreqError
+XO_GetMfrMdl
+XO_GetMode
+XO_GetOscType
+XO_GetPhaseError
+XO_GetPhaseErrorLim
+XO_GetSerialNo
+XO_GetState
+XO_GetZeroDac
+XO_SendMessage
+XO_SetDac
+XO_SetMode
+XO_SetPhaseErrorLim
+XO_GetAlarm
+XO_GetCalVal
+XO_GetDac
+XO_GetFreqError
+XO_GetMfrMdl
+XO_GetMode
+XO_GetOscType
+XO_GetPhaseError
+XO_GetPhaseErrorLim
+XO_GetSerialNo
+XO_GetState
+XO_GetZeroDac
+XO_SendMessage
+XO_SetDac
+XO_SetMode
+XO_SetPhaseErrorLim
+admin@securesync-0e2976:~$ ls /usr/cli/
+HS_GetStatus        dhcp4set            fp_unlock           gw4get              ip4get              localset            portstate           renew6              saveconf            slaacset            vlandel
+clean               dhcp6get            gettemp             gw4set              ip4set              manifest            ppsctrl             resetpins           savelog             stateset            yearget
+cleanhalt           dhcp6set            gpsdop              gw6cfg              ip6add              model               priorset            resetpw             scaleget            status              yearset
+clearcfg            displaymodeget      gpsdserviceportget  gw6get              ip6cfg              net                 ptpcfgload          routes4             scaleset            syncstate           zeroize
+clearlogs           displaymodeset      gpsdserviceportset  gw6set              ip6del              net4                ptpifaceset         routes6             sendevent           testevent
+clearstats          dns4cfg             gpsinfo             halt                ip6get              net6                ptpifacesetcfg      rt4add              sendnmeaudp         tfomget
+clihelp.txt         dns4get             gpsloc              helpcli             licenses            netnum              radius              rt4del              sendtrap            timeget
+dateget             dns4set             gpsmdl              hostget             list                options             rbxostatus          rt4get              servget             timeset
+dateset             doyget              gpsreset            hostset             loadconf            oscget              reboot              rt6add              services            unrestrict
+defcert             doyset              gpssat              hotstart            localget            portget             reftable            rt6del              servset             version
+dhcp4get            fp_lock             gw4cfg              ip4cfg              locallist           portset             renew4              rt6get              slaacget            vlanadd
+admin@securesync-0e2976:~$ for i in 1 2 3 4 5; do cat /sys/class/pps/pps0/assert; sleep 1; done
+1789417410.000013025#6739278
+1789417411.000014246#6739279
+1789417413.000024644#6739281
+1789417414.000027380#6739282
+1789417415.000042859#6739283
+admin@securesync-0e2976:~$ ls -la /etc/ptp/
+total 28
+drwxrwxr-x    2 root     root          4096 Feb 20  2026 .
+drwxrwxr-x   34 root     root          4096 May  7  2025 ..
+-rw-r--r--    1 root     root             7 Feb 20  2026 enabled-ifaces.conf
+-rw-rw-r--    1 root     root           172 Dec 12  2023 ptp4l-bc.conf.default
+-rw-r--r--    1 root     root           524 Jun 28 20:22 ptp4l-eth0.conf
+-rw-r--r--    1 root     root           101 Dec 12  2023 ptp4l.conf.default
+-rw-r--r--    1 root     root            12 Jun 28 20:22 timetransfer-eth0.env
+admin@securesync-0e2976:~$ cat /etc/ptp/ptp4l-eth0.conf 2>/dev/null | head -80
+# profile Default
+[global]
+  clock_servo linreg
+  domainNumber 0
+  hwts_filter full
+  priority1 1
+  priority2 64
+  slaveOnly 0
+  step_threshold 0.5
+  tx_timestamp_timeout 100
+  uds_address /var/run/ptp4l-eth0
+  utc_offset 37
+  BMCA ptp
+  delayAsymmetry 0
+  delay_mechanism E2E
+  hybrid_e2e 0
+  inhibit_multicast_service 0
+  logAnnounceInterval 0
+  logMinDelayReqInterval 0
+  logSyncInterval 0
+  masterOnly 0
+  network_transport UDPv4
+  ptp_dst_mac 01:1B:19:00:00:00
+  udp_ttl 1
+  unicast_listen 0
+  unicast_req_duration 300
+admin@securesync-0e2976:~$ 
+
