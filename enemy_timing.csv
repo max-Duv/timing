@@ -1,0 +1,99 @@
+timestamp,phase_error_ns,freq_error,dac_setting,tfom,osc_temp,cpu_temp,board_temp,response_time_sec,note
+2026-09-14T18:51:38.815179+00:00,N/A,N/A,N/A,2.0,N/A,N/A,N/A,0.801055,baseline_0
+2026-09-14T18:51:40.617585+00:00,N/A,N/A,N/A,2.0,N/A,N/A,N/A,0.801043,baseline_1
+2026-09-14T18:51:42.419968+00:00,N/A,N/A,N/A,2.0,N/A,N/A,N/A,0.801077,baseline_2
+2026-09-14T18:51:44.221568+00:00,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.801076,baseline_3
+2026-09-14T18:51:46.023900+00:00,N/A,N/A,N/A,2.0,N/A,N/A,N/A,0.80099,baseline_4
+2026-09-14T18:51:47.825890+00:00,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.801019,baseline_5
+2026-09-14T18:51:49.627866+00:00,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.800993,baseline_6
+2026-09-14T18:51:51.429961+00:00,N/A,N/A,N/A,2.0,N/A,N/A,N/A,0.801068,baseline_7
+2026-09-14T18:51:53.231897+00:00,N/A,N/A,N/A,2.0,N/A,N/A,N/A,0.800986,baseline_8
+2026-09-14T18:51:55.033894+00:00,N/A,N/A,N/A,2.0,N/A,N/A,N/A,0.800994,baseline_9
+2026-09-14T18:51:56.835954+00:00,N/A,N/A,N/A,2.0,N/A,N/A,N/A,0.801068,baseline_10
+2026-09-14T18:51:58.637321+00:00,N/A,N/A,N/A,2.0,N/A,N/A,N/A,0.800575,baseline_11
+2026-09-14T18:52:00.438945+00:00,N/A,N/A,N/A,2.0,N/A,N/A,N/A,0.801064,baseline_12
+2026-09-14T18:52:02.241313+00:00,N/A,N/A,N/A,2.0,N/A,N/A,N/A,0.80106,baseline_13
+2026-09-14T18:52:04.043739+00:00,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.801093,baseline_14
+2026-09-14T18:52:05.846192+00:00,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.801096,baseline_15
+2026-09-14T18:52:07.648636+00:00,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.801093,baseline_16
+2026-09-14T18:52:09.450905+00:00,N/A,N/A,N/A,2.0,N/A,N/A,N/A,0.800875,baseline_17
+2026-09-14T18:52:11.252908+00:00,N/A,N/A,N/A,2.0,N/A,N/A,N/A,0.800886,baseline_18
+2026-09-14T18:52:13.055301+00:00,N/A,N/A,N/A,2.0,N/A,N/A,N/A,0.80108,baseline_19
+2026-09-14T18:52:15.157904+00:00,N/A,N/A,N/A,2.0,N/A,N/A,N/A,0.800283,enemy_rapid_status_polling_0_action_0.300525s
+2026-09-14T18:52:16.860364+00:00,N/A,N/A,N/A,2.0,N/A,N/A,N/A,0.801048,enemy_rapid_status_polling_1_action_0.300582s
+2026-09-14T18:52:18.562965+00:00,N/A,N/A,N/A,2.0,N/A,N/A,N/A,0.801074,enemy_rapid_status_polling_2_action_0.300571s
+2026-09-14T18:52:20.265526+00:00,N/A,N/A,N/A,2.0,N/A,N/A,N/A,0.801044,enemy_rapid_status_polling_3_action_0.300577s
+2026-09-14T18:52:21.967784+00:00,N/A,N/A,N/A,2.0,N/A,N/A,N/A,0.800733,enemy_rapid_status_polling_4_action_0.300566s
+2026-09-14T18:52:23.669906+00:00,N/A,N/A,N/A,2.0,N/A,N/A,N/A,0.800575,enemy_rapid_status_polling_5_action_0.300585s
+2026-09-14T18:52:25.372508+00:00,N/A,N/A,N/A,2.0,N/A,N/A,N/A,0.80104,enemy_rapid_status_polling_6_action_0.300560s
+2026-09-14T18:52:27.074894+00:00,N/A,N/A,N/A,2.0,N/A,N/A,N/A,0.800785,enemy_rapid_status_polling_7_action_0.300573s
+2026-09-14T18:52:32.480897+00:00,N/A,N/A,N/A,2.0,N/A,N/A,N/A,0.800719,enemy_reference_status_query_0_action_1.001248s
+2026-09-14T18:52:34.884150+00:00,N/A,N/A,N/A,2.0,N/A,N/A,N/A,0.801026,enemy_reference_status_query_1_action_1.001275s
+2026-09-14T18:52:37.286979+00:00,N/A,N/A,N/A,2.0,N/A,N/A,N/A,0.801051,enemy_reference_status_query_2_action_1.000804s
+2026-09-14T18:52:39.690731+00:00,N/A,N/A,N/A,2.0,N/A,N/A,N/A,0.801038,enemy_reference_status_query_3_action_1.001264s
+2026-09-14T18:52:42.093890+00:00,N/A,N/A,N/A,2.0,N/A,N/A,N/A,0.800957,enemy_reference_status_query_4_action_1.001242s
+2026-09-14T18:52:44.497152+00:00,N/A,N/A,N/A,2.0,N/A,N/A,N/A,0.801047,enemy_reference_status_query_5_action_1.001278s
+2026-09-14T18:52:46.899894+00:00,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.800906,enemy_reference_status_query_6_action_1.000875s
+2026-09-14T18:52:49.302993+00:00,N/A,N/A,N/A,2.0,N/A,N/A,N/A,0.801056,enemy_reference_status_query_7_action_1.001063s
+2026-09-14T18:52:54.108715+00:00,N/A,N/A,N/A,2.0,N/A,N/A,N/A,0.801034,enemy_high_frequency_ntp_status_queries_0_action_0.400653s
+2026-09-14T18:52:55.910882+00:00,N/A,N/A,N/A,2.0,N/A,N/A,N/A,0.800511,enemy_high_frequency_ntp_status_queries_1_action_0.400659s
+2026-09-14T18:52:57.713577+00:00,N/A,N/A,N/A,2.0,N/A,N/A,N/A,0.80104,enemy_high_frequency_ntp_status_queries_2_action_0.400654s
+2026-09-14T18:52:59.516238+00:00,N/A,N/A,N/A,2.0,N/A,N/A,N/A,0.801043,enemy_high_frequency_ntp_status_queries_3_action_0.400651s
+2026-09-14T18:53:01.318920+00:00,N/A,N/A,N/A,2.0,N/A,N/A,N/A,0.80103,enemy_high_frequency_ntp_status_queries_4_action_0.400684s
+2026-09-14T18:53:03.121573+00:00,N/A,N/A,N/A,1.0,N/A,N/A,N/A,0.801031,enemy_high_frequency_ntp_status_queries_5_action_0.400662s
+2026-09-14T18:53:04.924237+00:00,N/A,N/A,N/A,2.0,N/A,N/A,N/A,0.801037,enemy_high_frequency_ntp_status_queries_6_action_0.400662s
+2026-09-14T18:53:06.726894+00:00,N/A,N/A,N/A,2.0,N/A,N/A,N/A,0.801052,enemy_high_frequency_ntp_status_queries_7_action_0.400660s
+2026-09-14T18:56:28.039793+00:00,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.005221,0.157053,11,False,baseline_0,time status
+2026-09-14T18:56:29.198832+00:00,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.005302,0.157523,11,False,baseline_1,time status
+2026-09-14T18:56:30.357403+00:00,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.005262,0.15714,11,False,baseline_2,time status
+2026-09-14T18:56:31.515836+00:00,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.005238,0.157016,11,False,baseline_3,time status
+2026-09-14T18:56:32.674205+00:00,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.005239,0.157009,11,False,baseline_4,time status
+2026-09-14T18:56:33.832572+00:00,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.005231,0.157004,11,False,baseline_5,time status
+2026-09-14T18:56:34.990962+00:00,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.00524,0.157037,11,False,baseline_6,time status
+2026-09-14T18:56:36.149473+00:00,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.005255,0.157161,11,False,baseline_7,time status
+2026-09-14T18:56:37.308010+00:00,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.00528,0.157159,11,False,baseline_8,time status
+2026-09-14T18:56:38.466389+00:00,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.005248,0.157045,11,False,baseline_9,time status
+2026-09-14T18:56:39.624123+00:00,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.005236,0.157211,11,False,baseline_10,time status
+2026-09-14T18:56:40.782488+00:00,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.005228,0.157015,11,False,baseline_11,time status
+2026-09-14T18:56:41.941195+00:00,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.005308,0.157318,11,False,baseline_12,time status
+2026-09-14T18:56:43.099090+00:00,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.005237,0.157169,11,False,baseline_13,time status
+2026-09-14T18:56:44.257554+00:00,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.005238,0.157074,11,False,baseline_14,time status
+2026-09-14T18:56:45.415922+00:00,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.00524,0.157,11,False,baseline_15,time status
+2026-09-14T18:56:46.574112+00:00,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.005268,0.15716,11,False,baseline_16,time status
+2026-09-14T18:56:47.732634+00:00,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.005256,0.157157,11,False,baseline_17,time status
+2026-09-14T18:56:48.896132+00:00,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.01029,0.162135,11,False,baseline_18,time status
+2026-09-14T18:56:50.054105+00:00,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.005246,0.157147,11,False,baseline_19,time status
+2026-09-14T18:56:51.319551+00:00,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.005268,0.157098,11,False,enemy_rapid_status_polling_0_action_0.106399s,time status
+2026-09-14T18:56:52.194126+00:00,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.005238,0.157124,11,False,enemy_rapid_status_polling_1_action_0.116596s,time status
+2026-09-14T18:56:53.407942+00:00,N/A,N/A,N/A,2.0,N/A,N/A,N/A,0.005254,0.506362,202,False,enemy_rapid_status_polling_2_action_0.106428s,time status\r\nREF:T=gps0 P=gps0\r\nNTP:Strat=1 Sync=Y\r\nOSC:OCXO (Trk/Lock)\r\nTFOM=2 MaxTFOM=15\r\n\r\nreal	0m0.635s\r\nuser	0m0.227s\r\nsys	0m0.314s\r\n[01;32madmin@securesync-0e2976[00m:[01;34m~[00m$ time status
+2026-09-14T18:56:54.510539+00:00,N/A,N/A,N/A,2.0,N/A,N/A,N/A,0.005231,0.395126,202,False,enemy_rapid_status_polling_3_action_0.106449s,time status\r\nREF:T=gps0 P=gps0\r\nNTP:Strat=1 Sync=Y\r\nOSC:OCXO (Trk/Lock)\r\nTFOM=2 MaxTFOM=15\r\n\r\nreal	0m0.557s\r\nuser	0m0.292s\r\nsys	0m0.201s\r\n[01;32madmin@securesync-0e2976[00m:[01;34m~[00m$ time status
+2026-09-14T18:56:55.598760+00:00,N/A,N/A,N/A,2.0,N/A,N/A,N/A,0.00529,0.380407,202,False,enemy_rapid_status_polling_4_action_0.106780s,time status\r\nREF:T=gps0 P=gps0\r\nNTP:Strat=1 Sync=Y\r\nOSC:OCXO (Trk/Lock)\r\nTFOM=2 MaxTFOM=15\r\n\r\nreal	0m0.579s\r\nuser	0m0.192s\r\nsys	0m0.308s\r\n[01;32madmin@securesync-0e2976[00m:[01;34m~[00m$ time status
+2026-09-14T18:56:56.696091+00:00,N/A,N/A,N/A,2.0,N/A,N/A,N/A,0.005236,0.389844,202,False,enemy_rapid_status_polling_5_action_0.106457s,time status\r\nREF:T=gps0 P=gps0\r\nNTP:Strat=1 Sync=Y\r\nOSC:OCXO (Trk/Lock)\r\nTFOM=2 MaxTFOM=15\r\n\r\nreal	0m0.570s\r\nuser	0m0.217s\r\nsys	0m0.277s\r\n[01;32madmin@securesync-0e2976[00m:[01;34m~[00m$ time status
+2026-09-14T18:56:57.778321+00:00,N/A,N/A,N/A,2.0,N/A,N/A,N/A,0.005242,0.374888,202,False,enemy_rapid_status_polling_6_action_0.106445s,time status\r\nREF:T=gps0 P=gps0\r\nNTP:Strat=1 Sync=Y\r\nOSC:OCXO (Trk/Lock)\r\nTFOM=2 MaxTFOM=15\r\n\r\nreal	0m0.526s\r\nuser	0m0.238s\r\nsys	0m0.244s\r\n[01;32madmin@securesync-0e2976[00m:[01;34m~[00m$ time status
+2026-09-14T18:56:58.830358+00:00,N/A,N/A,N/A,2.0,N/A,N/A,N/A,0.005256,0.344442,202,False,enemy_rapid_status_polling_7_action_0.106467s,time status\r\nREF:T=gps0 P=gps0\r\nNTP:Strat=1 Sync=Y\r\nOSC:OCXO (Trk/Lock)\r\nTFOM=2 MaxTFOM=15\r\n\r\nreal	0m0.517s\r\nuser	0m0.219s\r\nsys	0m0.263s\r\n[01;32madmin@securesync-0e2976[00m:[01;34m~[00m$ time status
+2026-09-14T18:57:02.753819+00:00,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.005245,0.157108,11,False,enemy_reference_status_query_0_action_0.162147s,time status
+2026-09-14T18:57:03.673333+00:00,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.00525,0.15701,11,False,enemy_reference_status_query_1_action_0.162114s,time status
+2026-09-14T18:57:04.593440+00:00,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.005241,0.157007,11,False,enemy_reference_status_query_2_action_0.162089s,time status
+2026-09-14T18:57:05.513263+00:00,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.005277,0.157118,11,False,enemy_reference_status_query_3_action_0.162139s,time status
+2026-09-14T18:57:06.433487+00:00,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.005238,0.157084,11,False,enemy_reference_status_query_4_action_0.162146s,time status
+2026-09-14T18:57:07.358775+00:00,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.00525,0.157071,11,False,enemy_reference_status_query_5_action_0.167215s,time status
+2026-09-14T18:57:08.278567+00:00,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.005229,0.157013,11,False,enemy_reference_status_query_6_action_0.162106s,time status
+2026-09-14T18:57:09.198745+00:00,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.005248,0.157012,11,False,enemy_reference_status_query_7_action_0.162183s,time status
+2026-09-14T18:57:13.071945+00:00,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.005236,0.157299,11,False,enemy_high_frequency_ntp_status_queries_0_action_0.111488s,time status
+2026-09-14T18:57:13.941718+00:00,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.005235,0.157086,11,False,enemy_high_frequency_ntp_status_queries_1_action_0.111638s,time status
+2026-09-14T18:57:14.811280+00:00,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.005203,0.157044,11,False,enemy_high_frequency_ntp_status_queries_2_action_0.111499s,time status
+2026-09-14T18:57:15.690755+00:00,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.005233,0.157024,11,False,enemy_high_frequency_ntp_status_queries_3_action_0.121657s,time status
+2026-09-14T18:57:16.570449+00:00,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.00523,0.157048,11,False,enemy_high_frequency_ntp_status_queries_4_action_0.121653s,time status
+2026-09-14T18:57:17.440211+00:00,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.005242,0.157127,11,False,enemy_high_frequency_ntp_status_queries_5_action_0.111622s,time status
+2026-09-14T18:57:18.315049+00:00,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.005296,0.157173,11,False,enemy_high_frequency_ntp_status_queries_6_action_0.116844s,time status
+2026-09-14T18:57:19.184476+00:00,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.005237,0.157018,11,False,enemy_high_frequency_ntp_status_queries_7_action_0.111500s,time status
+2026-09-14T18:57:22.945334+00:00,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.00523,0.157079,11,False,recovery_0,time status
+2026-09-14T18:57:24.103794+00:00,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.005238,0.157054,11,False,recovery_1,time status
+2026-09-14T18:57:25.262151+00:00,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.005239,0.157016,11,False,recovery_2,time status
+2026-09-14T18:57:26.420564+00:00,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.005234,0.157052,11,False,recovery_3,time status
+2026-09-14T18:57:27.578969+00:00,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.005222,0.157079,11,False,recovery_4,time status
+2026-09-14T18:57:28.737385+00:00,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.005242,0.15708,11,False,recovery_5,time status
+2026-09-14T18:57:29.895743+00:00,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.005254,0.157018,11,False,recovery_6,time status
+2026-09-14T18:57:31.054077+00:00,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.005242,0.156982,11,False,recovery_7,time status
+2026-09-14T18:57:32.211941+00:00,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.00524,0.157017,11,False,recovery_8,time status
+2026-09-14T18:57:33.370436+00:00,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.005242,0.157157,11,False,recovery_9,time status
