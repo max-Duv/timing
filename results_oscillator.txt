@@ -1,0 +1,91 @@
+python3 securesync_enemy_timing_v2.py 
+
+====================================================================
+SecureSync 2400 Timing Resilience Research Tool
+====================================================================
+Logging to: enemy_logs/enemy_timing_20260914_210606.csv
+
+====================================================================
+SECURESYNC OSCILLATOR PREFLIGHT
+====================================================================
+[+] XO_GetDac          /usr/bin/XO_GetDac
+[+] XO_GetZeroDac      /usr/bin/XO_GetZeroDac
+[+] XO_GetMode         /usr/bin/XO_GetMode
+[+] XO_GetPhaseError   /usr/bin/XO_GetPhaseError
+[+] XO_GetFreqError    /usr/bin/XO_GetFreqError
+[+] XO_SetDac          /usr/bin/XO_SetDac
+[+] XO_GetState        /usr/bin/XO_GetState
+
+[*] Current DAC     : 0x000072BF
+[*] Zero DAC        : 0x000072C3
+[*] XO mode         : 0
+[*] XO state        : XO State: 4
+[*] Phase error     : -215.0 ns
+[*] Frequency error : 0.000103 Hz
+[*] TFOM            : 4
+[*] Setter format   : bare
+====================================================================
+
+[+] Starting baseline_pre for 20 seconds...
+    DAC=0x000072BF ZeroDAC=0x000072C3 Phase=-215.0 ns Freq=0.000103 Hz TFOM=4 Mode=0 PPS=1789419967.000016537
+    DAC=0x000072BF ZeroDAC=0x000072C3 Phase=-215.0 ns Freq=0.000103 Hz TFOM=4 Mode=0 PPS=1789419968.000020700
+    DAC=0x000072BF ZeroDAC=0x000072C3 Phase=-215.0 ns Freq=0.000103 Hz TFOM=4 Mode=0 PPS=1789419969.000018152
+    DAC=0x000072BF ZeroDAC=0x000072C3 Phase=-216.0 ns Freq=0.000103 Hz TFOM=4 Mode=0 PPS=1789419971.000020478
+    DAC=0x000072BF ZeroDAC=0x000072C3 Phase=-217.0 ns Freq=0.000103 Hz TFOM=4 Mode=0 PPS=1789419973.000054823
+    DAC=0x000072BF ZeroDAC=0x000072C3 Phase=-219.0 ns Freq=0.000103 Hz TFOM=4 Mode=0 PPS=1789419975.000019268
+    DAC=0x000072BF ZeroDAC=0x000072C3 Phase=-219.0 ns Freq=0.000103 Hz TFOM=4 Mode=0 PPS=1789419976.000056671
+    DAC=0x000072BF ZeroDAC=0x000072C3 Phase=-219.0 ns Freq=0.000103 Hz TFOM=4 Mode=0 PPS=1789419977.000038674
+    DAC=0x000072BF ZeroDAC=0x000072C3 Phase=-219.0 ns Freq=0.000103 Hz TFOM=4 Mode=0 PPS=1789419978.000019336
+    DAC=0x000072BF ZeroDAC=0x000072C3 Phase=-219.0 ns Freq=0.000103 Hz TFOM=4 Mode=0 PPS=1789419979.000037359
+    DAC=0x000072BF ZeroDAC=0x000072C3 Phase=-218.0 ns Freq=0.000103 Hz TFOM=4 Mode=0 PPS=1789419980.000044442
+    DAC=0x000072BF ZeroDAC=0x000072C3 Phase=-218.0 ns Freq=0.000103 Hz TFOM=4 Mode=0 PPS=1789419981.000036944
+    DAC=0x000072BF ZeroDAC=0x000072C3 Phase=-218.0 ns Freq=0.000103 Hz TFOM=4 Mode=0 PPS=1789419982.000033777
+    DAC=0x000072BF ZeroDAC=0x000072C3 Phase=-219.0 ns Freq=0.000103 Hz TFOM=4 Mode=0 PPS=1789419983.000015140
+    DAC=0x000072BF ZeroDAC=0x000072C3 Phase=-220.0 ns Freq=0.000103 Hz TFOM=4 Mode=0 PPS=1789419984.000012632
+    DAC=0x000072BF ZeroDAC=0x000072C3 Phase=-220.0 ns Freq=0.000103 Hz TFOM=4 Mode=0 PPS=1789419985.000016393
+    DAC=0x000072BF ZeroDAC=0x000072C3 Phase=-221.0 ns Freq=0.000103 Hz TFOM=4 Mode=0 PPS=1789419986.000049805
+    DAC=0x000072BF ZeroDAC=0x000072C3 Phase=-221.0 ns Freq=0.000103 Hz TFOM=4 Mode=0 PPS=1789419987.000015698
+
+====================================================================
+CONTROLLED DAC PERTURBATION E1
+====================================================================
+[+] Original DAC : 0x000072BF
+[+] Zero DAC     : 0x000072C3
+[+] XO mode      : 0
+[+] Setter format: bare
+
+[+] Trial 1/3
+    Original : 0x000072BF
+    Offset   : +8
+    Target   : 0x000072C7
+    Argument : 72C7
+[*] Executing: XO_SetDac 0 72C7
+[!] Command returned 1:
+    XO_SetDac 0 72C7
+    stdout:
+      DAC value: 0x000072C7
+        Error: opt err (RC_WRONG_MODE).
+
+[*] Final DAC restoration check...
+    Current  : 0x000072BF
+    Expected : 0x000072BF
+[+] Final DAC verified: 0x000072BF
+
+[+] All data written to:
+    enemy_logs/enemy_timing_20260914_210606.csv
+Traceback (most recent call last):
+  File "/home/spectracom/securesync_enemy_timing_v2.py", line 1987, in <module>
+    main()
+  File "/home/spectracom/securesync_enemy_timing_v2.py", line 1939, in main
+    enemy.run(
+  File "/home/spectracom/securesync_enemy_timing_v2.py", line 1681, in run
+    self.enemy_dac_perturbation(
+  File "/home/spectracom/securesync_enemy_timing_v2.py", line 1381, in enemy_dac_perturbation
+    self.set_dac(
+  File "/home/spectracom/securesync_enemy_timing_v2.py", line 1079, in set_dac
+    raise RuntimeError(
+RuntimeError: XO_SetDac rejected the request.
+  command    : XO_SetDac 0 72C7
+  returncode : 1
+  stdout     : 'DAC value: 0x000072C7\n  Error: opt err (RC_WRONG_MODE).'
+  stderr     : ''
