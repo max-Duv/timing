@@ -1,0 +1,112 @@
+admin@securesync-0e2976:~$ systemctl | grep -i dac
+admin@securesync-0e2976:~$ cat /usr/sbin/lo
+loadfont          loadkmap          log_dac_stats.sh  logoutd           logrotate         logsave           losetup           
+admin@securesync-0e2976:~$ cat /usr/sbin/lo
+loadfont          loadkmap          log_dac_stats.sh  logoutd           logrotate         logsave           losetup           
+admin@securesync-0e2976:~$ cat /usr/sbin/log
+log_dac_stats.sh  logoutd           logrotate         logsave           
+admin@securesync-0e2976:~$ cat /usr/sbin/log
+log_dac_stats.sh  logoutd           logrotate         logsave           
+admin@securesync-0e2976:~$ cat /usr/sbin/log_dac_stats.sh 
+#!/bin/bash
+
+start_date=$(date "+%Y%m%d_%H%M%S")
+model_number=$(model modno)
+serial_number=$(model serno)
+
+file_name="/home/spectracom/log/dacStats_${model_number}_${serial_number}_${start_date}.csv"
+
+first_line='datetime,zero_dac,dac,phase_error,freq_error'
+echo "${first_line}" > "${file_name}"
+
+#used for XO_ commands
+SPEC_KTSAL_EN=true
+export SPEC_KTSAL_EN
+
+while :
+do
+    date_time=$(date "+%F %H:%M:%S")
+    read -r dac _ < <(XO_GetDac 0)
+    read -r zero_dac _ < <(XO_GetZeroDac 0)
+    read -r phase _ < <(XO_GetPhaseError 0)
+    read -r freq _ < <(XO_GetFreqError 0)
+    echo "${date_time},0x${zero_dac},0x${dac},${phase},${freq}" >> "${file_name}"
+    sleep 1
+done
+admin@securesync-0e2976:~$ systemctl status dacstats.service
+○ dacstats.service - dac stats log service.
+     Loaded: loaded (/usr/lib/systemd/system/dacstats.service; disabled; preset: disabled)
+     Active: inactive (dead)
+admin@securesync-0e2976:~$ ls -la /var/lo
+lock/ log/  logs/ 
+admin@securesync-0e2976:~$ ls -la /var/log/ | grep -iE 'dac|osc\tfom|time|gps'
+admin@securesync-0e2976:~$ journalctl -u dacstats.service -n 30 --no-pager
+Hint: You are currently not seeing messages from other users and the system.
+      Users in groups 'adm', 'systemd-journal', 'wheel' can see all messages.
+      Pass -q to turn off this notice.
+No journal files were opened due to insufficient permissions.
+admin@securesync-0e2976:~$ sudo journalctl -u dacstats.service -n 30 --no-pager
+Password: 
+Sorry, user admin is not allowed to execute '/usr/bin/journalctl -u dacstats.service -n 30 --no-pager' as root on securesync-0e2976.
+admin@securesync-0e2976:~$ ls /usr/cli/ | grep -iE 'set|cfg|config|write|dac|osc|ref|tfom|pps|hold'
+clearcfg
+dateset
+dhcp4set
+dhcp6set
+displaymodeset
+dns4cfg
+dns4set
+doyset
+gpsdserviceportset
+gpsreset
+gw4cfg
+gw4set
+gw6cfg
+gw6set
+hostset
+ip4cfg
+ip4set
+ip6cfg
+localset
+oscget
+portset
+ppsctrl
+priorset
+ptpcfgload
+ptpifaceset
+ptpifacesetcfg
+reftable
+resetpins
+resetpw
+scaleset
+servset
+slaacset
+stateset
+tfomget
+timeset
+yearset
+admin@securesync-0e2976:~$ cat /sys/class/pp
+ppp/ pps/ 
+admin@securesync-0e2976:~$ cat /sys/class/pps/pps0/assert 
+1789416857.000008346#6738725
+admin@securesync-0e2976:~$ cat /sys/class/pps/pps0/clear 2>/dev/null 
+admin@securesync-0e2976:~$ cat /sys/class/pps/pps0/mode 
+1151
+admin@securesync-0e2976:~$ cat /sys/class/pp
+ppp/ pps/ 
+admin@securesync-0e2976:~$ cat /sys/class/pps/pps0/name 
+tsyncpci0
+admin@securesync-0e2976:~$ ps aux | grep -iE 'ptp|phc|pmc'
+root       319  0.0  0.0   2672  1700 ?        S    Jun28   3:50 phc2sys -q -S 0.1 -s CLOCK_REALTIME -c /dev/ptp0 -O 0 -R 0.25 -P 0.3 -I 0.1
+root       389  0.4  0.0   2568  1780 ?        Ss   Jun28 487:09 /usr/bin/ptp-master-timetransfer -s /dev/ptp_tsync -c /dev/ptp2 -i eth0 -e 0
+root      1608  0.2  0.0   2732  1852 ?        S<s  Jun28 234:31 /usr/sbin/ptp4l -i eth0 -f /etc/ptp/ptp4l-eth0.conf -q
+root      1651  0.0  0.0   2648  1696 ?        S    Jun28   0:17 /usr/sbin/pmc -d 0 -t 0x0 -b0 -us /var/run/ptp4l-eth0
+root     29465  0.0  0.0   2648  1692 ?        S    20:15   0:00 /usr/sbin/pmc -d 0 -t 0x0 -u -b 1 -s /var/run/ptp4l-eth0 get port_stats_np
+root     29466  0.0  0.0   2648  1688 ?        S    20:15   0:00 /usr/sbin/pmc -d 0 -t 0x0 -u -b 0 -s /var/run/ptp4l-eth0 set grandmaster_settings_np clockClass 6 clockAccuracy 0x21 offsetScaledLogVariance 0x58e0 currentUtcOffset 37 leap61 0 leap59 0 currentUtcOffsetValid 1 ptpTimescale 1 timeTraceable 1 frequencyTraceable 1 timeSource 0x20 
+admin    29468  0.0  0.0   3584  1916 pts/0    S+   20:15   0:00 grep -iE ptp|phc|pmc
+admin@securesync-0e2976:~$ pmc -u -b 0 'GET CURRENT_DATA_SET' 2>/dev/null 
+admin@securesync-0e2976:~$ pmc -u -b 0 'GET TIME_STATUS_NP' 2>/dev/null 
+admin@securesync-0e2976:~$ ls /sys/class/ptp/ 2>/dev/null 
+ptp0  ptp1  ptp2  ptp3
+admin@securesync-0e2976:~$ 
+
