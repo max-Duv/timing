@@ -1,0 +1,10 @@
+/usr/cli/oscget
+/usr/cli/tfomget
+/usr/share/zoneinfo/right/Asia/Dacca
+/usr/share/zoneinfo/right/Europe/Moscow
+/usr/share/zoneinfo/posix/Asia/Dacca
+/usr/share/zoneinfo/posix/Europe/Moscow
+/usr/share/augeas/lenses/dist/nagioscfg.aug
+/usr/lib/python3.11/site-packages/lxml/isoschematron
+/usr/lib/systemd/system/dacstats.service
+/usr/sbin/log_dac_stats.sh
